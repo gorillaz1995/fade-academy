@@ -8,13 +8,30 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        sm: "640px", // iPhone 8
+        md: "932px", // iPhone 15 Pro Max
+        lg: "1024px", // tablet
+        xl: "1440px", // small-ish laptop
+      },
+      fontFamily: {
+        "stint-ultra-expanded": ['"Stint Ultra Expanded"', "sans-serif"],
+        "pontano-sans": ['"Pontano Sans"', "sans-serif"],
+        "luxurious-script": ['"Luxurious Script"', "cursive"],
+        "familjen-grotesk": ['"Familjen Grotesk"', "sans-serif"],
+      },
+      keyframes: {
+        breathe: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        breathe: "breathe 4s ease-in-out infinite",
       },
     },
   },
   plugins: [],
 };
+
 export default config;
